@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-ssr-prefetch": "node dist/angular-ssr-prefetch/server/server.mjs"
+    "serve:ssr:angular-ssr-prefetch": "nodemon dist/angular-ssr-prefetch/server/server.mjs",
+    "postbuild":"ngx-sitemap ./dist/angular-ssr-prefetch/browser https://www.angular-ss-prefetch.com"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ngx-sitemap": "^1.0.0",
+    "nodemon": "^3.1.0",
     "typescript": "~5.4.2"
   }
 }
